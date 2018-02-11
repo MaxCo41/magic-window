@@ -161,7 +161,7 @@ function getDecibels() {
 
 window.setInterval(() => {
     quoteElem[0].innerHTML = getQuotes();
-    decibelElem[0].innerHTML = getDecibels();
+    decibelElem[0].innerHTML = getDecibels() +" Db";
     heartElem[0].innerHTML = getPersonDebit();
 }, 10000);
 
