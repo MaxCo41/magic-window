@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 .main {
-    background-image: url("../magic-window/bck-bxl.jpg");
+    background-image: url("./bck-bxl.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
