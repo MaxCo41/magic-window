@@ -150,16 +150,23 @@ function getQuotes() {
     return quotes[index];
 }
 
-function getValueFromSensor() {
+function getPersonDebit() {
     return Math.random() * 1.05;
 }
 
+function getDecibels() {
+    return Math.floor(Math.random() * 30);
+}
+
+
 window.setInterval(() => {
     quoteElem[0].innerHTML = getQuotes();
+    decibelElem[0].innerHTML = getDecibels();
+    heartElem[0].innerHTML = getPersonDebit();
 }, 10000);
 
 window.setInterval(() => {
-    logoElem.style.transform = "scale(" + getValueFromSensor() + ")";
+    logoElem.style.transform = "scale(" + getPersonDebit() + ")";
 }, 400);
 
 dateElem[0].innerHTML = hour + ":" + min + " - " + day + "/" + month + "/" + year;
