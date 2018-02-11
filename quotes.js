@@ -1,22 +1,4 @@
-"use strict";
-
-let mainElem    = document.getElementsByClassName("main"),
-    leftElem    = document.getElementsByClassName('left'),
-    centerElem  = document.getElementsByClassName('center'),
-    rightElem   = document.getElementsByClassName('right'),
-    dateElem    = document.getElementsByClassName('date-time'),
-    decibelElem = document.getElementsByClassName('decibels'),
-    heartElem   = document.getElementsByClassName('heartbeat'),
-    quoteElem   = document.getElementsByClassName('quotes'),
-    buttonElem  = document.getElementById('sender'),
-    logoElem    = document.getElementById('logo'),
-    date = new Date(),
-    hour = date.getHours(),
-    min = date.getMinutes(),
-    day = date.getDay(),
-    month = date.getMonth(),
-    year = date.getFullYear();
-const quotes = [
+var quotes = [
     ' The world’s oldest piece of chewing gum is over 9,000 years old!',
     ' A coyote can hear a mouse moving underneath a foot of snow.',
     ' Bolts of lightning can shoot out of an erupting volcano.',
@@ -145,21 +127,4 @@ const quotes = [
     ' On Jupiter and Saturn it rains diamonds.',
 ];
 
-function getQuotes() {
-    let index = Math.floor(Math.random() * (quotes.length));
-    return quotes[index];
-}
-
-function getValueFromSensor() {
-    return Math.random() * 1.05;
-}
-
-window.setInterval(() => {
-    quoteElem[0].innerHTML = getQuotes();
-}, 10000);
-
-window.setInterval(() => {
-    logoElem.style.transform = "scale(" + getValueFromSensor() + ")";
-}, 400);
-
-dateElem[0].innerHTML = hour + ":" + min + " - " + day + "/" + month + "/" + year;
+exports.quotes = quotes;
